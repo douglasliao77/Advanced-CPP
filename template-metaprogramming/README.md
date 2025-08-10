@@ -8,3 +8,6 @@ This folder contains 20+ C++ template metaprogramming exercises focused on type 
 
 1. **Reverse.cpp**  
    Implement a type trait `Reverse` that reverses a template parameter pack. Uses partial specialization and recursion.
+
+2. **Interleave.cpp**  
+   Implement `Interleave` to merge two `Pack`s by alternating their elements.
