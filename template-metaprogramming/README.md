@@ -17,3 +17,6 @@ This folder contains 20+ C++ template metaprogramming exercises focused on type 
 
 4. **Are_Equal.cpp**  
    Implement `Are_Equal` to determine if two `Pack`s contain exactly the same types (order does not matter). Use `Is_Subset` in both directions to check equality, resulting in a boolean `value`.
+
+5. **Most_Common.cpp**
+    Find the most frequent type in a pack using occurance_count and std::conditional_t to set value and type.

@@ -4,7 +4,6 @@
 template <typename... Ts>
 struct Pack { };
 
-
 // Primary template
 template <typename T, typename Pack>
 struct Contains
