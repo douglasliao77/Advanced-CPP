@@ -20,3 +20,6 @@ This folder contains 20+ C++ template metaprogramming exercises focused on type 
 
 5. **Most_Common.cpp**
     Find the most frequent type in a pack using occurance_count and std::conditional_t to set value and type.
+
+6. **Largest_Type.cpp**
+    Implement Largest_Type to find the type with the largest size (sizeof) in a pack. Provide a nested type alias and a value for the size.
