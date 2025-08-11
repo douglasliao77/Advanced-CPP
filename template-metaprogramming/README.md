@@ -11,3 +11,9 @@ This folder contains 20+ C++ template metaprogramming exercises focused on type 
 
 2. **Interleave.cpp**  
    Implement `Interleave` to merge two `Pack`s by alternating their elements.
+
+3. **Count_Unique.cpp**
+    Implement Count_Unique to count unique types in a variadic pack by building a Pack of unique types with Make_Unique and checking membership with Contains. The count is stored in value.
+
+4. **Are_Equal.cpp**  
+   Implement `Are_Equal` to determine if two `Pack`s contain exactly the same types (order does not matter). Use `Is_Subset` in both directions to check equality, resulting in a boolean `value`.
