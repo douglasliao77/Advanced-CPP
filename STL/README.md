@@ -19,6 +19,9 @@ The **Standard Template Library (STL)** is a collection of powerful, generic C++
 
 
 ## Files
-  1. **Hamming_Distance.cpp**
-    Hamming distance measures how many positions two strings differ, counting extra characters if lengths differ. The program reads a word and finds the five closest words from a word list based on this distance, then prints them.
+1. **Hamming_Distance.cpp**
+Hamming distance measures how many positions two strings differ, counting extra characters if lengths differ. The program reads a word and finds the five closest words from a word list based on this distance, then prints them.
+
+2. **Product.cpp**  
+   Defines a `Product` struct with name, price, and stock quantity, along with comparison and stream operators. Demonstrates sorting, filtering, and aggregating products using standard library algorithms.  
 
