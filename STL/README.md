@@ -25,3 +25,5 @@ Hamming distance measures how many positions two strings differ, counting extra 
 2. **Product.cpp**  
    Defines a `Product` struct with name, price, and stock quantity, along with comparison and stream operators. Demonstrates sorting, filtering, and aggregating products using standard library algorithms.  
 
+3. **CPU.cpp**
+    Reads task intervals from a file, merges overlapping bursts, and identifies the longest active CPU periods using STL algorithm

@@ -3,6 +3,8 @@
 #include <iterator>
 #include <utility>
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
 using Task = std::pair<int, int>;
 
@@ -22,7 +24,7 @@ Task merge_or_split(Task const& burst, Task const& next)
     }
     // split the timeline so that 'next' is the start of the next
     // burst.
-    return b;
+    return next;
 }
 
 void read(std::istream& is, Task& task)
@@ -35,9 +37,67 @@ void write(std::ostream& os, Task const& task)
     os << task.first << " " << task.second;
 }
 
+
+namespace std
+{
+    std::istream& operator>>(std::istream& is, Task& task)
+    {
+        read(is, task);
+        return is;
+    }
+
+    std::ostream& operator<<(std::ostream& os, const Task& task)
+    {
+        write(os, task);
+        return os;
+    }
+}
+
+
 int main()
 {
+    std::ifstream ifs { "tasks.txt" };
+
+
+    std::vector<Task> tasks {
+        std::istream_iterator<Task> { ifs },
+        std::istream_iterator<Task> { }
+    };
+
     
+
+    std::sort(std::begin(tasks), std::end(tasks));
+
+    std::partial_sum(std::begin(tasks), std::end(tasks), std::begin(tasks), 
+        merge_or_split);
+
+    
+
+    std::sort(std::begin(tasks), std::end(tasks), 
+        [](const Task& t1, const Task& t2) 
+        {
+            if (t1.first < t2.first)
+            {
+                return true;
+            }
+            else if (t1.first == t2.first )
+            {
+                return t2.second < t1.second;
+            } 
+            return false;
+
+        });
+
+    tasks.erase(std::unique(std::begin(tasks), std::end(tasks),
+        [](const Task& t1, const Task& t2)
+        {
+            return t1.first == t2.first;
+        } 
+        ) , 
+    std::end(tasks));
+    std::copy(std::begin(tasks), std::end(tasks), 
+        std::ostream_iterator<Task> { std::cout, "\n"});
+
 }
 
 /* Example evaluation of the algorithm
