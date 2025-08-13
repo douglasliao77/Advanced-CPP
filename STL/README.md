@@ -17,7 +17,6 @@ The **Standard Template Library (STL)** is a collection of powerful, generic C++
   Objects that can be called like functions, used to customize algorithm behavior.
 
 
-
 ## Files
 1. **Hamming_Distance.cpp**
 Hamming distance measures how many positions two strings differ, counting extra characters if lengths differ. The program reads a word and finds the five closest words from a word list based on this distance, then prints them.
@@ -27,3 +26,6 @@ Hamming distance measures how many positions two strings differ, counting extra 
 
 3. **CPU.cpp**
     Reads task intervals from a file, merges overlapping bursts, and identifies the longest active CPU periods using STL algorithm
+
+4. **Resource_Allocation.cpp**
+    Reads processes and their hardware resources from a file, then determines which processes can run given a list of busy resources using STL algorithms (no loops or recursion). Implements stream operators for the Process struct.
