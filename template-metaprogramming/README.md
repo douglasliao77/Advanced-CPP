@@ -23,3 +23,6 @@ This folder contains 20+ C++ template metaprogramming exercises focused on type 
 
 6. **Largest_Type.cpp**
     Implement Largest_Type to find the type with the largest size (sizeof) in a pack. Provide a nested type alias and a value for the size.
+
+7. **Priority.cpp**  
+    Use SFINAE and helper overloads to implement `get_priority`, calling the highest-priority existing member function (`first`, `second`, `third`) of type `T`, or returning `4` if none exist.

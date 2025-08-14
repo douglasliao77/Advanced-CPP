@@ -1,6 +1,5 @@
 #include <type_traits>
 
-
 template <typename... Ts>
 struct Pack { };
 
@@ -28,7 +27,6 @@ struct Contains<T, Pack<T, Rest...>>
 {
     static constexpr bool value = true;
 };
-
 
 // Primary template
 template <typename FirstPack, typename SecondPack>
