@@ -29,3 +29,8 @@ Hamming distance measures how many positions two strings differ, counting extra 
 
 4. **Resource_Allocation.cpp**
     Reads processes and their hardware resources from a file, then determines which processes can run given a list of busy resources using STL algorithms (no loops or recursion). Implements stream operators for the Process struct.
+
+
+5. **Tags.cpp**
+    The task is to search through a file of entries, where each entry has associated tags, and find all entries that match a given set of tags. The program should then extract and output the matching entries in sorted order, with tag order in the file being irrelevant.
+
